@@ -1,0 +1,172 @@
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(date 1609192388453)
++++ b/.idea/modules.xml	(date 1609192388453)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/RDForm.iml" filepath="$PROJECT_DIR$/.idea/RDForm.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/RDForm.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/RDForm.iml b/.idea/RDForm.iml
+new file mode 100644
+--- /dev/null	(date 1609192388453)
++++ b/.idea/RDForm.iml	(date 1609192388453)
+@@ -0,0 +1,12 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="WEB_MODULE" version="4">
++  <component name="NewModuleRootManager">
++    <content url="file://$MODULE_DIR$">
++      <excludeFolder url="file://$MODULE_DIR$/temp" />
++      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
++      <excludeFolder url="file://$MODULE_DIR$/tmp" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/vcs.xml b/.idea/vcs.xml
+new file mode 100644
+--- /dev/null	(date 1609196053923)
++++ b/.idea/vcs.xml	(date 1609196053923)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="VcsDirectoryMappings">
++    <mapping directory="$PROJECT_DIR$" vcs="Git" />
++  </component>
++</project>
+\ No newline at end of file
+Index: alumni-story.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/alumni-story.html b/alumni-story.html
+new file mode 100644
+--- /dev/null	(date 1609192388453)
++++ b/alumni-story.html	(date 1609192388453)
+@@ -0,0 +1,80 @@
++<!DOCTYPE html>
++<html lang="de">
++<head>
++    <meta charset="utf-8">
++    <meta name="viewport" content="width=device-width, initial-scale=1.0">
++    <meta name="description" content="">
++    <meta name="author" content="">
++
++    <!-- Datepicker -->
++    <link href="css/datepicker.css" rel="stylesheet" media="screen">
++
++    <!-- JQueryUI Style -->
++    <link href="css/smoothness/jquery-ui.custom.min.css" rel="stylesheet">
++
++    <!-- Bootstrap -->
++    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
++
++    <!-- style -->
++    <link href="css/rdform.css" rel="stylesheet" media="screen">
++
++    <style type="text/css">
++    body {
++        background: url("img/noise.png"), -o-linear-gradient(top, #F4F4F4 0px, #EEEEEE 100%) transparent;
++        background: url("img/noise.png") repeat scroll 0% 0%, -moz-linear-gradient(center top , #F4F4F4 0%, #EEEEEE 100%) repeat scroll 0% 0% transparent;
++    }
++    .container {
++        border: 1px solid lightGray;
++        padding: 2% 8%;
++        border-radius: 10px;
++        margin: 10px auto;
++        background: white;
++        max-width: 960px;
++    }
++    </style>
++
++    <title>Alumni Story</title>
++</head>
++<body>
++
++<div class="container">
++    <h1>View Alumni Story</h1>
++
++    <!-- the form container -->
++    <form action="#" class="form-horizontal rdform" role="form"></form>
++</div>
++
++
++    <!-- jQuery -->
++    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
++    <!-- Bootstrap components -->
++    <!--<script src="js/bootstrap.min.js"></script>-->
++
++    <!-- Datepicker  http://www.eyecon.ro/bootstrap-datepicker/ -->
++    <!--<script src="js/bootstrap-datepicker.js"></script>-->
++
++    <!-- JQuery UI -->
++    <script src="js/jquery-ui.custom.min.js"></script>
++
++    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsonld/1.0.0/jsonld.min.js"></script>
++
++    <!-- own stuff -->
++    <script src="js/rdform.js"></script>
++
++    <script type="text/javascript">
++    $(document).ready(function(){
++        $('.rdform').RDForm({
++            template: "templates/alumni-story-form.html",
++            hooks: "js/hooks/hooks.js",
++            debug: true,
++            verbose: true,
++
++            submit: function() {
++                console.log( JSON.stringify(this, null, '\t') );
++            }
++        });
++    });
++    </script>
++
++</body>
++</html>
+Index: package-lock.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/package-lock.json b/package-lock.json
+new file mode 100644
+--- /dev/null	(date 1609192388453)
++++ b/package-lock.json	(date 1609192388453)
+@@ -0,0 +1,13 @@
++{
++  "name": "@donsi/rdform",
++  "version": "0.0.6",
++  "lockfileVersion": 1,
++  "requires": true,
++  "dependencies": {
++    "jquery": {
++      "version": "3.5.1",
++      "resolved": "https://registry.npmjs.org/jquery/-/jquery-3.5.1.tgz",
++      "integrity": "sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg=="
++    }
++  }
++}
